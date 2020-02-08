@@ -45,11 +45,11 @@ public class MainController {
      */
     @GetMapping("/data/{data}")
     @ResponseBody
-    public List<String> addData(@PathVariable String data) {
+    public String addData(@PathVariable String data) {
 
         listData.add(data);
 
-        return listData;
+        return "Successfully added " + data + "<br/><a href='/data'>View Data</a>";
     }
 
     /*
